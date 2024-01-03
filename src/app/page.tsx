@@ -1,13 +1,26 @@
-import Image from 'next/image';
-import { MdArrowBack, MdEmail } from 'react-icons/md';
+'use client';
+
+import { Image } from '@nextui-org/react';
+import { MdArrowBack } from 'react-icons/md';
 import servers from '@/data/servers.json';
 import Marquee from 'react-fast-marquee';
+import Link from 'next/link';
+import { Fade } from 'react-awesome-reveal';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-3 lg:p-32">
-      <div className="max-w-4xl w-full items-center lg:items-start justify-start flex flex-col gap-5">
-        <Image src={'/favicon.png'} alt="Logo" width={140} height={140} />
+    <main className="flex min-h-screen flex-col items-center justify-between p-3 lg:px-32 lg:py-10">
+      <Fade
+        cascade
+        className="max-w-4xl w-full items-center lg:items-start justify-start flex flex-col max-lg:my-2 gap-1"
+      >
+        <Image
+          isBlurred
+          src={'/favicon.png'}
+          alt="Logo"
+          width={140}
+          height={140}
+        />
         <h1 className="text-white font-bold text-3xl">Locutor</h1>
         <p className="text-principal text-md text-justify">
           Olá! Me chamo <strong>Leandro</strong> e tenho 22 anos. Sou um
@@ -33,17 +46,17 @@ export default function Home() {
           <h2 className="text-white font-bold text-xl">
             Você pode me encontrar por aqui...
           </h2>
-          <a
-            className="text-principal text-md items-center gap-1 hover:text-gray-100 hidden lg:flex bg-neutral-900 p-2 rounded-md font-bold"
+          <Link
+            className="text-principal text-md items-center gap-1 hover:text-gray-100 hidden lg:flex bg-neutral-900 p-2 rounded-md font-bold transition-all duration-200"
             href="/servers"
           >
             <MdArrowBack />
             Mais servidores
-          </a>
+          </Link>
         </div>
         <Marquee
           autoFill
-          className="flex flex-row"
+          className="flex flex-row max-lg:mb-3"
           gradient
           gradientColor="#101010"
         >
@@ -51,15 +64,18 @@ export default function Home() {
             return (
               <a
                 href={server.inviteURL}
-                className="bg-neutral-900 mx-3 max-w-72 w-72 p-3 flex items-center justify-start rounded-md hover:bg-neutral-800"
+                className="bg-neutral-900 mx-3 max-w-72 w-72 p-3 flex items-center justify-start rounded-md hover:bg-neutral-800 transition-all duration-200"
                 key={server.name}
+                target="_blank"
               >
-                <img
+                <Image
+                  alt="server logo"
+                  isBlurred
                   src={server.avatarURL}
                   className="w-12 bg-cover rounded-md"
                 />
                 <div className="flex flex-col">
-                  <p className="text-white font-bold text-md ml-3 gap-1.5 flex">
+                  <p className="text-white font-bold text-md ml-3 gap-1.5 flex items-center">
                     {server.partnered ? (
                       <Image
                         src={'/assets/partner.svg'}
@@ -82,7 +98,7 @@ export default function Home() {
                     )}
                     {server.name}
                   </p>
-                  <p className="text-principal text-md ml-3 gap-1.5 flex">
+                  <p className="text-principal text-md ml-3 gap-1.5 flex items-center">
                     <Image
                       src={'/assets/members.svg'}
                       width={16}
@@ -98,7 +114,7 @@ export default function Home() {
         </Marquee>
         <Marquee
           autoFill
-          className="flex flex-row"
+          className="flex flex-row max-lg:mb-3"
           gradient
           gradientColor="#101010"
           direction="right"
@@ -107,15 +123,18 @@ export default function Home() {
             return (
               <a
                 href={server.inviteURL}
-                className="bg-neutral-900 mx-3 w-max p-3 flex items-center justify-center rounded-md hover:bg-neutral-800"
+                className="bg-neutral-900 mx-3 max-w-72 w-72 p-3 flex items-center justify-start rounded-md hover:bg-neutral-800 transition-all duration-200"
                 key={server.name}
+                target="_blank"
               >
-                <img
+                <Image
+                  alt="server logo"
+                  isBlurred
                   src={server.avatarURL}
                   className="w-12 bg-cover rounded-md"
                 />
                 <div className="flex flex-col">
-                  <p className="text-white font-bold text-md ml-3 gap-1.5 flex">
+                  <p className="text-white font-bold text-md ml-3 gap-1.5 flex items-center">
                     {server.partnered ? (
                       <Image
                         src={'/assets/partner.svg'}
@@ -138,7 +157,7 @@ export default function Home() {
                     )}
                     {server.name}
                   </p>
-                  <p className="text-principal text-md ml-3 gap-1.5 flex">
+                  <p className="text-principal text-md ml-3 gap-1.5 flex items-center">
                     <Image
                       src={'/assets/members.svg'}
                       width={16}
@@ -152,21 +171,14 @@ export default function Home() {
             );
           })}
         </Marquee>
-        <a
+        <Link
           className="text-principal text-md items-center justify-center gap-1 hover:text-gray-100 lg:hidden flex w-full bg-neutral-900 rounded-md p-2 font-bold"
           href="/servers"
         >
           <MdArrowBack />
           Mais servidores
-        </a>
-        <a
-          className="text-principal text-md items-center justify-center gap-1 hover:text-gray-100 flex w-full bg-neutral-900 rounded-md p-2 font-bold"
-          href="/contact"
-        >
-          <MdEmail />
-          Contactar
-        </a>
-      </div>
+        </Link>
+      </Fade>
     </main>
   );
 }

@@ -13,7 +13,7 @@
   },
   {
     "name": "Gamers Club",
-    "description": "Lorem **ipsum** dolor sit amet",
+    "description": "Lorem **ipsum** dolor sit amet\n\n\n# AIAIAI!",
     "avatarURL": "https://i.imgur.com/nCoBzet.png",
     "bannerURL": "https://i.imgur.com/1HBq4Rq.jpeg",
     "inviteURL": "https://discord.gg/gamersclub",
@@ -48,15 +48,15 @@
     "members": 10000
   },
   {
-    "name": "BRALORANT",
+    "name": "LimeWire",
     "description": "Lorem **ipsum** dolor sit amet",
-    "avatarURL": "https://i.imgur.com/r9HOorp.gif",
-    "bannerURL": "https://i.imgur.com/u6xE4ns.gif",
-    "inviteURL": "https://discord.gg/bralorant",
-    "tags": ["Dono"],
-    "verified": false,
+    "avatarURL": "https://i.imgur.com/CwE4Evf.png",
+    "bannerURL": "https://i.imgur.com/DByL93j.jpeg",
+    "inviteURL": "https://discord.gg/bluewillow",
+    "tags": ["Moderador"],
+    "verified": true,
     "partnered": false,
     "isHighlight": false,
-    "members": 10000
+    "members": 2300000
   }
 ]

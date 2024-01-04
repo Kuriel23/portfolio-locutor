@@ -82,5 +82,17 @@
     "partnered": false,
     "isHighlight": false,
     "members": 60000
+      },
+  {
+    "name": "PUBG LITE",
+    "description": "Lorem **ipsum** dolor sit amet",
+    "avatarURL": "https://i.imgur.com/dLfnPEl.png",
+    "bannerURL": "https://i.imgur.com/Ov1a3dk.jpg",
+    "inviteURL": "https://discord.gg/pubglite",
+    "tags": ["Administrador"],
+    "verified": true,
+    "partnered": false,
+    "isHighlight": false,
+    "members": 30000 
   }
 ]

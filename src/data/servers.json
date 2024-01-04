@@ -18,7 +18,7 @@
     "bannerURL": "https://i.imgur.com/1HBq4Rq.jpeg",
     "inviteURL": "https://discord.gg/gamersclub",
     "tags": ["Administrador"],
-    "verified": false,
+    "verified": true,
     "partnered": false,
     "isHighlight": true,
     "members": 60000
@@ -33,7 +33,7 @@
     "verified": true,
     "partnered": false,
     "isHighlight": false,
-    "members": 50000
+    "members": 150000
   },
   {
     "name": "BRALORANT",

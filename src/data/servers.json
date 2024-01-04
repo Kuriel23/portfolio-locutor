@@ -45,7 +45,7 @@
     "verified": false,
     "partnered": false,
     "isHighlight": false,
-    "members": 10000
+    "members": 11000
   },
   {
     "name": "LimeWire",
@@ -58,17 +58,29 @@
     "partnered": false,
     "isHighlight": false,
     "members": 3000000
-      },
+  },
   {
     "name": "Flakes Power",
     "description": "Lorem **ipsum** dolor sit amet",
     "avatarURL": "https://i.imgur.com/g5Ostcd.png",
     "bannerURL": "https://i.imgur.com/23hPXqf.png",
-    "inviteURL": "https://discord.gg/bluewillow",
+    "inviteURL": "https://discord.gg/flakespower",
     "tags": ["Administrador"],
     "verified": false,
     "partnered": true,
     "isHighlight": false,
     "members": 100000
+     },
+  {
+    "name": "Subsolo do Goularte",
+    "description": "Lorem **ipsum** dolor sit amet",
+    "avatarURL": "https://i.imgur.com/MZUcUMT.png",
+    "bannerURL": "https://i.imgur.com/JI6WCFw.png",
+    "inviteURL": "https://discord.gg/goularte",
+    "tags": ["Administrador"],
+    "verified": false,
+    "partnered": true,
+    "isHighlight": false,
+    "members": 60000
   }
 ]

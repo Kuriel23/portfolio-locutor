@@ -22,7 +22,7 @@ export default function Home() {
           height={140}
         />
         <h1 className="text-white font-bold text-3xl">Locutor</h1>
-        <p className="text-principal text-md text-justify">
+        <p className="text-principal text-md text-justify my-3">
           Olá! Me chamo <strong>Leandro</strong> e tenho 22 anos. Sou um
           entusiasta apaixonado em construir, crescer e gerenciar grandes
           comunidades para jogos, organizações e marcas. Estou há 7 anos
@@ -38,11 +38,11 @@ export default function Home() {
           personalizados para o Discord. Se você precisar de um servidor
           conforme suas necessidades, estou aqui para ajudar!
         </p>
-        <p className="text-principal text-md text-justify">
+        <p className="text-principal text-md text-justify my-3">
           Também forneço minha experiência para colaborar voluntariamente com
           projetos que acredito valer a pena.
         </p>
-        <div className="flex justify-between items-center w-full">
+        <div className="flex justify-between items-center w-full mb-3">
           <h2 className="text-white font-bold text-xl">
             Você pode me encontrar por aqui...
           </h2>

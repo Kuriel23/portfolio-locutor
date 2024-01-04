@@ -5,11 +5,11 @@
     "avatarURL": "https://i.imgur.com/JKEuNr1.png",
     "bannerURL": "https://i.imgur.com/vIbMdds.png",
     "inviteURL": "https://discord.gg/gou",
-    "tags": ["Gerente"],
-    "verified": false,
-    "partnered": true,
+    "tags": ["Administrador"],
+    "verified": true,
+    "partnered": false,
     "isHighlight": true,
-    "members": 600000
+    "members": 700000
   },
   {
     "name": "Gamers Club",
@@ -17,20 +17,20 @@
     "avatarURL": "https://i.imgur.com/nCoBzet.png",
     "bannerURL": "https://i.imgur.com/1HBq4Rq.jpeg",
     "inviteURL": "https://discord.gg/gamersclub",
-    "tags": ["Gerente"],
+    "tags": ["Administrador"],
     "verified": false,
     "partnered": false,
     "isHighlight": true,
     "members": 60000
   },
   {
-    "name": "Hero Base",
+    "name": "VALORANT - BR",
     "description": "Lorem **ipsum** dolor sit amet",
-    "avatarURL": "https://i.imgur.com/EJLYmns.jpeg",
-    "bannerURL": "https://i.imgur.com/12f6MKz.jpeg",
-    "inviteURL": "https://discord.gg/herobase",
-    "tags": ["Gerente"],
-    "verified": false,
+    "avatarURL": "https://i.imgur.com/IIKc1oj.png",
+    "bannerURL": "https://i.imgur.com/YIe21IG.png",
+    "inviteURL": "https://discord.gg/valorant-br",
+    "tags": ["Auxílio"],
+    "verified": true,
     "partnered": false,
     "isHighlight": false,
     "members": 50000
@@ -41,7 +41,7 @@
     "avatarURL": "https://i.imgur.com/r9HOorp.gif",
     "bannerURL": "https://i.imgur.com/u6xE4ns.gif",
     "inviteURL": "https://discord.gg/bralorant",
-    "tags": ["Dono"],
+    "tags": ["Administrador"],
     "verified": false,
     "partnered": false,
     "isHighlight": false,
@@ -53,10 +53,22 @@
     "avatarURL": "https://i.imgur.com/CwE4Evf.png",
     "bannerURL": "https://i.imgur.com/DByL93j.jpeg",
     "inviteURL": "https://discord.gg/bluewillow",
-    "tags": ["Moderador"],
+    "tags": ["Chefe de Moderação"],
     "verified": true,
     "partnered": false,
     "isHighlight": false,
     "members": 3000000
+      },
+  {
+    "name": "Flakes Power",
+    "description": "Lorem **ipsum** dolor sit amet",
+    "avatarURL": "https://i.imgur.com/CwE4Evf.png",
+    "bannerURL": "https://i.imgur.com/DByL93j.jpeg",
+    "inviteURL": "https://discord.gg/bluewillow",
+    "tags": ["Administrador"],
+    "verified": true,
+    "partnered": false,
+    "isHighlight": false,
+    "members": 1000000
   }
 ]

@@ -12,7 +12,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-3 lg:px-32 lg:py-10">
       <Fade
         cascade
-        className="max-w-4xl w-full items-center lg:items-start justify-start flex flex-col max-lg:my-2 gap-1"
+        className="max-w-4xl w-full items-center lg:items-start justify-start flex flex-col max-xl:my-2 gap-1"
       >
         <Image
           isBlurred

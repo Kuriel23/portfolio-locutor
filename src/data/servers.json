@@ -79,7 +79,7 @@
     "inviteURL": "https://discord.gg/goularte",
     "tags": ["Administrador"],
     "verified": false,
-    "partnered": true,
+    "partnered": false,
     "isHighlight": false,
     "members": 60000
   }

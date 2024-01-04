@@ -47,56 +47,54 @@ export default function Servers() {
                   onOpen();
                 }}
               >
-                <Zoom cascade>
-                  <img
-                    alt="server banner"
-                    src={server.bannerURL}
-                    className="w-full h-full object-cover max-h-36 rounded-t-md"
-                  />
-                  <Image
-                    alt="server logo"
-                    isBlurred
-                    src={server.avatarURL}
-                    className="w-12 ml-3 -mt-8 rounded-xl"
-                  />
-                  <div className="w-full flex justify-between items-center px-3 mt-3">
-                    <p className="text-white font-bold text-md gap-1.5 flex items-center">
-                      {server.partnered ? (
-                        <Image
-                          src={'/assets/partner.svg'}
-                          width={16}
-                          height={16}
-                          alt="Partnered"
-                        />
-                      ) : (
-                        ''
-                      )}
-                      {server.verified ? (
-                        <Image
-                          src={'/assets/verified.svg'}
-                          width={16}
-                          height={16}
-                          alt="Verified"
-                        />
-                      ) : (
-                        ''
-                      )}
-                      {server.name}
-                    </p>
-                    <div className="flex bg-neutral-700 text-principal rounded-md p-1 gap-1 items-center opacity-25 hover:opacity-80 text-xs">
-                      <MdLabel /> {server.tags[0]}
-                    </div>
-                  </div>
-                  <p className="text-principal text-md mt-2 gap-1.5 px-3 flex items-center">
-                    <Image
-                      src={'/assets/members.svg'}
-                      width={16}
-                      height={16}
-                      alt="Members"
-                    />
-                    {Math.ceil(server.members).toLocaleString('pt-BR')}{' '}
+                <img
+                  alt="server banner"
+                  src={server.bannerURL}
+                  className="w-full h-full object-cover max-h-36 rounded-t-md"
+                />
+                <Image
+                  alt="server logo"
+                  isBlurred
+                  src={server.avatarURL}
+                  className="w-12 ml-3 -mt-8 rounded-xl"
+                />
+                <div className="w-full flex justify-between items-center px-3 mt-3">
+                  <p className="text-white font-bold text-md gap-1.5 flex items-center">
+                    {server.partnered ? (
+                      <Image
+                        src={'/assets/partner.svg'}
+                        width={16}
+                        height={16}
+                        alt="Partnered"
+                      />
+                    ) : (
+                      ''
+                    )}
+                    {server.verified ? (
+                      <Image
+                        src={'/assets/verified.svg'}
+                        width={16}
+                        height={16}
+                        alt="Verified"
+                      />
+                    ) : (
+                      ''
+                    )}
+                    {server.name}
                   </p>
-                </Zoom>
+                  <div className="flex bg-neutral-700 text-principal rounded-md p-1 gap-1 items-center opacity-25 hover:opacity-80 text-xs">
+                    <MdLabel /> {server.tags[0]}
+                  </div>
+                </div>
+                <p className="text-principal text-md mt-2 gap-1.5 px-3 flex items-center">
+                  <Image
+                    src={'/assets/members.svg'}
+                    width={16}
+                    height={16}
+                    alt="Members"
+                  />
+                  {Math.ceil(server.members).toLocaleString('pt-BR')}{' '}
+                </p>
               </div>
             );
           })}

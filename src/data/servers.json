@@ -62,13 +62,13 @@
   {
     "name": "Flakes Power",
     "description": "Lorem **ipsum** dolor sit amet",
-    "avatarURL": "https://i.imgur.com/CwE4Evf.png",
-    "bannerURL": "https://i.imgur.com/DByL93j.jpeg",
+    "avatarURL": "https://i.imgur.com/g5Ostcd.png",
+    "bannerURL": "https://i.imgur.com/23hPXqf.png",
     "inviteURL": "https://discord.gg/bluewillow",
     "tags": ["Administrador"],
-    "verified": true,
-    "partnered": false,
+    "verified": false,
+    "partnered": true,
     "isHighlight": false,
-    "members": 1000000
+    "members": 100000
   }
 ]

@@ -21,9 +21,10 @@ export default function Home() {
           alt="Logo"
           width={140}
           height={140}
+          className="mt-4 -mb-2 lg:-mb-7"
         />
         <h1 className="text-white font-bold text-3xl">Locutor</h1>
-        <p className="text-principal text-md text-justify my-3">
+        <p className="text-principal text-md text-justify mb-1">
           Olá! Me chamo <strong>Leandro</strong> e tenho 22 anos. Sou um
           entusiasta apaixonado em construir, crescer e gerenciar grandes
           comunidades para jogos, organizações e marcas. Estou há 7 anos
@@ -31,7 +32,7 @@ export default function Home() {
           Discord e atualmente trabalho como <strong>Administrador</strong> e{' '}
           <strong>Líder de equipe</strong>.
         </p>
-        <p className="text-principal text-md text-justify">
+        <p className="text-principal text-md text-justify -my-1 lg:-my-7">
           Hoje em dia eu tenho a honra de <strong>liderar</strong> a{' '}
           <strong>maior comunidade</strong> da América do Sul no Discord, que já
           somam mais de 700.000 membros. Além de todas essas atividades de
@@ -39,11 +40,11 @@ export default function Home() {
           personalizados para o Discord. Se você precisar de um servidor
           conforme suas necessidades, estou aqui para ajudar!
         </p>
-        <p className="text-principal text-md text-justify my-3">
+        <p className="text-principal text-md text-justify">
           Também forneço minha experiência para colaborar voluntariamente com
           projetos que acredito valer a pena.
         </p>
-        <div className="flex justify-between items-center w-full mb-3">
+        <div className="flex justify-between items-center w-full my-3">
           <h2 className="text-white font-bold text-xl">
             Você pode me encontrar por aqui...
           </h2>
@@ -179,15 +180,6 @@ export default function Home() {
           <MdArrowBack />
           Mais servidores
         </Link>
-        <p className="text-xs text-center text-principal w-full">
-          Site feito com ❤️ por{' '}
-          <a
-            href="https://kurieldev.tk"
-            className="text-neutral-200 hover:text-neutral-100 font-bold"
-          >
-            KurielDev
-          </a>
-        </p>
       </Fade>
     </main>
   );

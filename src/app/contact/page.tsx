@@ -109,6 +109,15 @@ export default function Contact() {
             <MdSend />
             Enviar
           </button>
+          <p className="text-xs text-center text-principal w-full mt-4">
+            Site feito com ❤️ por{' '}
+            <a
+              href="https://kurieldev.tk"
+              className="text-neutral-200 hover:text-neutral-100 font-bold"
+            >
+              KurielDev
+            </a>
+          </p>
         </form>
       </div>
     </main>

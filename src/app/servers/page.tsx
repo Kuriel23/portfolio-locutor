@@ -1,6 +1,6 @@
 'use client';
 import servers from '@/data/servers.json';
-import { MdLabel } from 'react-icons/md';
+import { MdLabel, MdLink } from 'react-icons/md';
 import {
   Image,
   Modal,
@@ -9,15 +9,17 @@ import {
   ModalHeader,
   useDisclosure,
 } from '@nextui-org/react';
-import { Zoom } from 'react-awesome-reveal';
 import { useState } from 'react';
 import Markdown from 'react-markdown';
+import Link from 'next/link';
+import { Url } from 'next/dist/shared/lib/router/router';
 
 type Server = {
   partnered?: boolean;
   verified?: boolean;
   name?: string;
   bannerURL?: string;
+  inviteURL?: string;
   description?: string;
   tags?: string[];
 };
@@ -144,9 +146,36 @@ export default function Servers() {
                   <MdLabel /> {selectedServer?.tags?.[0]}
                 </div>
               </div>
-              <Markdown className="px-2 lg:px-5 text-principal text-md text-justify">
+              <Markdown
+                className="px-2 lg:px-5 text-principal text-sm leading-6"
+                components={{
+                  h1(props) {
+                    const { node, ...rest } = props;
+                    return <h1 className="text-white text-lg mb-4" {...rest} />;
+                  },
+                  p(props) {
+                    const { node, ...rest } = props;
+                    return <p className="mb-5" {...rest} />;
+                  },
+                  ul(props) {
+                    const { node, ...rest } = props;
+                    return <ul className="list-disc ml-5" {...rest} />;
+                  },
+                }}
+              >
                 {selectedServer?.description}
               </Markdown>
+              {selectedServer?.inviteURL !== '' ? (
+                <Link
+                  className="text-principal text-md items-center justify-center gap-1 hover:text-gray-100 flex mx-5 bg-neutral-800 rounded-md p-2 font-bold"
+                  href={selectedServer?.inviteURL as Url}
+                >
+                  <MdLink />
+                  Link do Servidor
+                </Link>
+              ) : (
+                <></>
+              )}
             </ModalBody>
           </ModalContent>
         </Modal>

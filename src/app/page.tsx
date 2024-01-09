@@ -12,6 +12,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-3 lg:px-32 lg:py-10">
       <Fade
         cascade
+        triggerOnce
         className="max-w-4xl w-full items-center lg:items-start justify-start flex flex-col max-xl:my-2 gap-1"
       >
         <Image
@@ -178,6 +179,15 @@ export default function Home() {
           <MdArrowBack />
           Mais servidores
         </Link>
+        <p className="text-xs text-center text-principal w-full">
+          Site feito com ❤️ por{' '}
+          <a
+            href="https://kurieldev.tk"
+            className="text-neutral-200 hover:text-neutral-100 font-bold"
+          >
+            KurielDev
+          </a>
+        </p>
       </Fade>
     </main>
   );

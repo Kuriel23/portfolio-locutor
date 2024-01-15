@@ -9,7 +9,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-3 lg:px-32">
-      <div className="max-w-4xl w-full items-center lg:items-start justify-center flex flex-col max-xl:my-2 gap-1">
+      <div className="max-w-4xl w-full items-center lg:items-start justify-center flex flex-col max-xl:my-2 gap-1 -mt-2">
         <Image
           isBlurred
           src={'/favicon.png'}
@@ -18,8 +18,8 @@ export default function Home() {
           height={140}
           className="mt-4"
         />
-        <h1 className="text-white font-bold text-3xl mb-10">Locutor</h1>
-        <p className="text-principal text-md text-justify mb-1">
+        <h1 className="text-white font-bold text-3xl mb-8">Locutor</h1>
+        <p className="text-principal text-md text-left mb-1">
           Olá! Me chamo <strong>Leandro</strong> e tenho 22 anos. Sou um
           entusiasta apaixonado em construir, crescer e gerenciar grandes
           comunidades para jogos, organizações e marcas. Estou há 7 anos
@@ -27,7 +27,7 @@ export default function Home() {
           Discord e atualmente trabalho como <strong>Administrador</strong> e{' '}
           <strong>Líder de equipe</strong>.
         </p>
-        <p className="text-principal text-md text-justify my-2">
+        <p className="text-principal text-md text-left my-2">
           Hoje em dia eu tenho a honra de <strong>liderar</strong> a{' '}
           <strong>maior comunidade</strong> da América do Sul no Discord, que já
           somam mais de 700.000 membros. Além de todas essas atividades de
@@ -35,7 +35,7 @@ export default function Home() {
           personalizados para o Discord. Se você precisar de um servidor
           conforme suas necessidades, estou aqui para ajudar!
         </p>
-        <p className="text-principal text-md text-justify">
+        <p className="text-principal text-md text-left">
           Também forneço minha experiência para colaborar voluntariamente com
           projetos que acredito valer a pena.
         </p>

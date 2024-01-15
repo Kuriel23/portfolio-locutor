@@ -8,8 +8,8 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-3 lg:px-32 lg:py-10">
-      <div className="max-w-4xl w-full items-center lg:items-start justify-start flex flex-col max-xl:my-2 gap-1">
+    <main className="flex min-h-screen flex-col items-center justify-center p-3 lg:px-32">
+      <div className="max-w-4xl w-full items-center lg:items-start justify-center flex flex-col max-xl:my-2 gap-1">
         <Image
           isBlurred
           src={'/favicon.png'}
@@ -39,7 +39,7 @@ export default function Home() {
           Também forneço minha experiência para colaborar voluntariamente com
           projetos que acredito valer a pena.
         </p>
-        <div className="flex justify-between items-center w-full mt-5">
+        <div className="flex justify-between items-center w-full mt-10">
           <h2 className="text-white font-bold text-xl">
             Você pode me encontrar por aqui...
           </h2>

@@ -12,7 +12,7 @@ export default function Home() {
       <div className="max-w-4xl w-full items-center lg:items-start justify-center flex flex-col max-xl:my-2 gap-1 -mt-2">
         <Image
           isBlurred
-          src={'/favicon.png'}
+          src={'/favicon.gif'}
           alt="Logo"
           width={140}
           height={140}

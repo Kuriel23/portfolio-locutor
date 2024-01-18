@@ -22,7 +22,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={inter.className + ' max-lg:pb-[4rem]'}>
+      <body
+        className={
+          inter.className + ' max-lg:pb-[4rem]'
+        }
+      >
         <Providers>
           <LeftHeader />
           {children}

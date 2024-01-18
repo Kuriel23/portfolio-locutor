@@ -1,6 +1,6 @@
 'use client';
 import servers from '@/data/servers.json';
-import { MdLabel } from 'react-icons/md';
+import { MdLabel, MdLink } from 'react-icons/md';
 import {
   Image,
   Modal,
@@ -9,15 +9,17 @@ import {
   ModalHeader,
   useDisclosure,
 } from '@nextui-org/react';
-import { Zoom } from 'react-awesome-reveal';
 import { useState } from 'react';
 import Markdown from 'react-markdown';
+import Link from 'next/link';
+import { Url } from 'next/dist/shared/lib/router/router';
 
 type Server = {
   partnered?: boolean;
   verified?: boolean;
   name?: string;
   bannerURL?: string;
+  inviteURL?: string;
   description?: string;
   tags?: string[];
 };
@@ -47,56 +49,54 @@ export default function Servers() {
                   onOpen();
                 }}
               >
-                <Zoom cascade>
-                  <img
-                    alt="server banner"
-                    src={server.bannerURL}
-                    className="w-full h-full object-cover max-h-36 rounded-t-md"
-                  />
-                  <Image
-                    alt="server logo"
-                    isBlurred
-                    src={server.avatarURL}
-                    className="w-12 ml-3 -mt-8 rounded-xl"
-                  />
-                  <div className="w-full flex justify-between items-center px-3 mt-3">
-                    <p className="text-white font-bold text-md gap-1.5 flex items-center">
-                      {server.partnered ? (
-                        <Image
-                          src={'/assets/partner.svg'}
-                          width={16}
-                          height={16}
-                          alt="Partnered"
-                        />
-                      ) : (
-                        ''
-                      )}
-                      {server.verified ? (
-                        <Image
-                          src={'/assets/verified.svg'}
-                          width={16}
-                          height={16}
-                          alt="Verified"
-                        />
-                      ) : (
-                        ''
-                      )}
-                      {server.name}
-                    </p>
-                    <div className="flex bg-neutral-700 text-principal rounded-md p-1 gap-1 items-center opacity-25 hover:opacity-80 text-xs">
-                      <MdLabel /> {server.tags[0]}
-                    </div>
-                  </div>
-                  <p className="text-principal text-md mt-2 gap-1.5 px-3 flex items-center">
-                    <Image
-                      src={'/assets/members.svg'}
-                      width={16}
-                      height={16}
-                      alt="Members"
-                    />
-                    {Math.ceil(server.members).toLocaleString('pt-BR')}{' '}
+                <img
+                  alt="server banner"
+                  src={server.bannerURL}
+                  className="w-full h-full object-cover max-h-36 rounded-t-md"
+                />
+                <Image
+                  alt="server logo"
+                  isBlurred
+                  src={server.avatarURL}
+                  className="w-12 ml-3 -mt-8 rounded-xl"
+                />
+                <div className="w-full flex justify-between items-center px-3 mt-3">
+                  <p className="text-white font-bold text-md gap-1.5 flex items-center">
+                    {server.partnered ? (
+                      <Image
+                        src={'/assets/partner.svg'}
+                        width={16}
+                        height={16}
+                        alt="Partnered"
+                      />
+                    ) : (
+                      ''
+                    )}
+                    {server.verified ? (
+                      <Image
+                        src={'/assets/verified.svg'}
+                        width={16}
+                        height={16}
+                        alt="Verified"
+                      />
+                    ) : (
+                      ''
+                    )}
+                    {server.name}
                   </p>
-                </Zoom>
+                  <div className="flex bg-neutral-700 text-principal rounded-md p-1 gap-1 items-center opacity-25 hover:opacity-80 text-xs">
+                    <MdLabel /> {server.tags[0]}
+                  </div>
+                </div>
+                <p className="text-principal text-md mt-2 gap-1.5 px-3 flex items-center">
+                  <Image
+                    src={'/assets/members.svg'}
+                    width={16}
+                    height={16}
+                    alt="Members"
+                  />
+                  {Math.ceil(server.members).toLocaleString('pt-BR')}{' '}
+                </p>
               </div>
             );
           })}
@@ -146,9 +146,36 @@ export default function Servers() {
                   <MdLabel /> {selectedServer?.tags?.[0]}
                 </div>
               </div>
-              <Markdown className="px-2 lg:px-5 text-principal text-md text-justify">
+              <Markdown
+                className="px-2 lg:px-5 text-principal text-sm leading-6"
+                components={{
+                  h1(props) {
+                    const { node, ...rest } = props;
+                    return <h1 className="text-white text-lg mb-4" {...rest} />;
+                  },
+                  p(props) {
+                    const { node, ...rest } = props;
+                    return <p className="mb-5" {...rest} />;
+                  },
+                  ul(props) {
+                    const { node, ...rest } = props;
+                    return <ul className="list-disc ml-5" {...rest} />;
+                  },
+                }}
+              >
                 {selectedServer?.description}
               </Markdown>
+              {selectedServer?.inviteURL !== '' ? (
+                <Link
+                  className="text-principal text-md items-center justify-center gap-1 hover:text-gray-100 flex mx-5 bg-neutral-800 rounded-md p-2 font-bold"
+                  href={selectedServer?.inviteURL as Url}
+                >
+                  <MdLink />
+                  Link do Servidor
+                </Link>
+              ) : (
+                <></>
+              )}
             </ModalBody>
           </ModalContent>
         </Modal>

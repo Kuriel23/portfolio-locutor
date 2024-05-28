@@ -36,18 +36,6 @@
     "members": 3000000
   },
   {
-    "name": "VALORANT - BR",
-    "description": "Lorem **ipsum** dolor sit amet",
-    "avatarURL": "https://i.imgur.com/IIKc1oj.png",
-    "bannerURL": "https://i.imgur.com/YIe21IG.png",
-    "inviteURL": "https://discord.gg/valorant-br",
-    "tags": ["Auxílio"],
-    "verified": true,
-    "partnered": false,
-    "isHighlight": false,
-    "members": 150000
-  },
-  {
     "name": "Wuthering Waves",
     "description": "Lorem **ipsum** dolor sit amet",
     "avatarURL": "https://i.imgur.com/MkUidRa.png",
@@ -60,6 +48,18 @@
     "members": 500000
   },
   {
+    "name": "VALORANT - BR",
+    "description": "Lorem **ipsum** dolor sit amet",
+    "avatarURL": "https://i.imgur.com/IIKc1oj.png",
+    "bannerURL": "https://i.imgur.com/YIe21IG.png",
+    "inviteURL": "https://discord.gg/valorant-br",
+    "tags": ["Auxílio"],
+    "verified": true,
+    "partnered": false,
+    "isHighlight": false,
+    "members": 150000
+  },
+  {
     "name": "Flakes Power",
     "description": "Lorem **ipsum** dolor sit amet",
     "avatarURL": "https://i.imgur.com/g5Ostcd.png",
@@ -70,18 +70,6 @@
     "partnered": true,
     "isHighlight": false,
     "members": 100000
-  },
-  {
-    "name": "Subsolo do gou",
-    "description": "Lorem **ipsum** dolor sit amet",
-    "avatarURL": "https://i.imgur.com/MZUcUMT.png",
-    "bannerURL": "https://i.imgur.com/JI6WCFw.png",
-    "inviteURL": "https://discord.gg/goularte",
-    "tags": ["Administrador"],
-    "verified": false,
-    "partnered": false,
-    "isHighlight": false,
-    "members": 60000
   },
   {
     "name": "Gamers Club",

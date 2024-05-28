@@ -24,8 +24,8 @@ export default function Home() {
           entusiasta apaixonado em construir, crescer e gerenciar grandes
           comunidades para jogos, organizações e marcas. Estou há 7 anos
           desenvolvendo, gerenciando e criando soluções para comunidades no
-          Discord e atualmente trabalho como <strong>Administrador</strong> e{' '}
-          <strong>Líder de equipe</strong>.
+          Discord e atualmente trabalho como <strong>Administrador</strong>,{' '}
+          <strong>Líder de equipe</strong> e <strong>Moderador</strong>.
         </p>
         <p className="text-principal text-md text-left my-2">
           Hoje em dia eu tenho a honra de <strong>liderar</strong> a{' '}

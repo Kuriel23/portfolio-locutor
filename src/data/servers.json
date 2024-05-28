@@ -21,7 +21,7 @@
     "verified": false,
     "partnered": false,
     "isHighlight": false,
-    "members": 11000
+    "members": 25000
   },
   {
     "name": "LimeWire",
@@ -46,6 +46,18 @@
     "partnered": false,
     "isHighlight": false,
     "members": 150000
+  },
+  {
+    "name": "Wuthering Waves",
+    "description": "Lorem **ipsum** dolor sit amet",
+    "avatarURL": "https://i.imgur.com/MkUidRa.png",
+    "bannerURL": "https://i.imgur.com/Qbtzeng.png",
+    "inviteURL": "https://discord.gg/wutheringwaves",
+    "tags": ["Moderador"],
+    "verified": true,
+    "partnered": false,
+    "isHighlight": false,
+    "members": 500000
   },
   {
     "name": "Flakes Power",

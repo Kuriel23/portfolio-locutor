@@ -57,7 +57,7 @@ export default function Home() {
           gradient
           gradientColor="#101010"
         >
-          {servers.slice(0, 4).map(server => {
+          {servers.filter(server => server.isHome).slice(0, 4).map(server => {
             return (
               <a
                 href={server.inviteURL}
@@ -116,7 +116,7 @@ export default function Home() {
           gradientColor="#101010"
           direction="right"
         >
-          {servers.slice(4, 8).map(server => {
+          {servers.filter(server => server.isHome).slice(4, 8).map(server => {
             return (
               <a
                 href={server.inviteURL}

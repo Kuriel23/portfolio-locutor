@@ -8,7 +8,7 @@ export default function Contact() {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [subject, setSubject] = useState<string>('');
-  const [content, setContent] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
   const [sending, setSending] = useState<boolean>(false);
 
   const validateEmail = (value: string) =>
@@ -26,14 +26,25 @@ export default function Contact() {
     event.preventDefault();
 
     await axios
-      .post('https://backoffice.animesgg.com/api/form/locutor', {
-        subject,
-        content,
-        name,
-        email,
+      .post('https://discord.com/api/webhooks/1193728289219563582/Ey9Gis1_9FfNIyjF4A6Nu2UQ9z3R2dhiw0019KszBC6jJT49NYOydKuCO_SXtYV6opzI', {
+        username: "Formulário",
+        embeds: [
+          {
+            "title": subject,
+            "description": `Nome: ${name}\nEmail: ${email}\n\n${message}`,
+            "color": 16757000
+          }
+        ],
+        content: "",
+        avatar_url: "https://locutor.work/favicon.gif",
       })
       .then(() => {
-        return setSending(true);
+        setName('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+        setSending(true);
+        return setTimeout(() => setSending(false), 5000)
       })
       .catch(() => {
         console.log('Erro');
@@ -62,6 +73,7 @@ export default function Contact() {
             placeholder="Insira seu primeiro e último nome"
             className="mb-3 hover:border-neutral-800 border-neutral-900"
             isRequired
+            value={name}
             onValueChange={setName}
             maxLength={100}
             max={100}
@@ -76,6 +88,7 @@ export default function Contact() {
             isInvalid={isInvalid}
             color={isInvalid ? 'danger' : 'success'}
             errorMessage={isInvalid && 'Por favor, insira um email válido.'}
+            value={email}
             onValueChange={setEmail}
             maxLength={100}
             max={100}
@@ -87,6 +100,7 @@ export default function Contact() {
             placeholder="Seu Assunto"
             className="mb-3 hover:border-neutral-800 border-neutral-900"
             isRequired
+            value={subject}
             onValueChange={setSubject}
             maxLength={100}
             max={100}
@@ -99,7 +113,8 @@ export default function Contact() {
             isRequired
             height={1200}
             minRows={20}
-            onValueChange={setContent}
+            value={message}
+            onValueChange={setMessage}
             maxLength={1200}
           />
           <button

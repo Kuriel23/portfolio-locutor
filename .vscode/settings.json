@@ -1,0 +1,5 @@
+{
+    "editor.defaultFormatter": "dotatong.wt-prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+}

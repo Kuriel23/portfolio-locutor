@@ -1,8 +1,9 @@
 'use client';
 import { Input, Textarea } from '@nextui-org/react';
 import axios from 'axios';
+import Link from 'next/link';
 import { useMemo, useState } from 'react';
-import { MdSend } from 'react-icons/md';
+import { MdArrowBackIosNew, MdSend } from 'react-icons/md';
 
 export default function Contact() {
   const [name, setName] = useState<string>('');
@@ -54,7 +55,12 @@ export default function Contact() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-3 lg:px-32 lg:py-10">
       <div className="max-w-4xl w-full lg:items-start items-center justify-start flex flex-col">
-        <h1 className="text-white font-bold text-3xl">Contato</h1>
+        <h1 className="text-white flex gap-1 items-center font-bold text-3xl">
+          <Link href={'/'} className='hover:text-principal'>
+            <MdArrowBackIosNew />
+          </Link>
+          Contato
+        </h1>
         <h2 className="text-principal text-xl my-3 text-center">
           Contate-me para poder-lhe oferecer os meus serviços.
         </h2>

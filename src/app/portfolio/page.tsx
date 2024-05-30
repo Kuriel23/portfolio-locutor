@@ -1,6 +1,6 @@
 'use client';
 import servers from '@/data/servers.json';
-import { MdLabel, MdLink } from 'react-icons/md';
+import { MdArrowBackIosNew, MdLabel, MdLink } from 'react-icons/md';
 import {
   Image,
   Modal,
@@ -31,7 +31,12 @@ export default function Servers() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-3 lg:px-32 lg:py-10">
       <div className="max-w-4xl w-full lg:items-start items-center justify-start flex flex-col">
-        <h1 className="text-white font-bold text-3xl">Servidores</h1>
+        <h1 className="text-white flex gap-1 items-center font-bold text-3xl">
+          <Link href={'/'} className='hover:text-principal'>
+            <MdArrowBackIosNew />
+          </Link>
+          Portfólio
+        </h1>
         <h2 className="text-principal text-xl my-3 text-center">
           Clique nos servidores agora para ver o que eu fiz!
         </h2>
@@ -52,35 +57,33 @@ export default function Servers() {
                 <img
                   alt="server banner"
                   src={server.bannerURL}
-                  className="w-full h-full object-cover max-h-36 rounded-t-md"
+                  className="w-full h-full object-cover max-h-36 rounded-t-md pointer-events-none"
                 />
                 <Image
                   alt="server logo"
                   isBlurred
                   src={server.avatarURL}
-                  className="w-12 ml-3 -mt-8 rounded-xl"
+                  className="w-12 ml-3 -mt-8 rounded-xl pointer-events-none"
                 />
                 <div className="w-full flex justify-between items-center px-3 mt-3">
                   <p className="text-white font-bold text-md gap-1.5 flex items-center">
-                    {server.partnered ? (
+                    {server.partnered && (
                       <Image
                         src={'/assets/partner.svg'}
                         width={16}
                         height={16}
                         alt="Partnered"
+                        className='pointer-events-none'
                       />
-                    ) : (
-                      ''
                     )}
-                    {server.verified ? (
+                    {server.verified && (
                       <Image
                         src={'/assets/verified.svg'}
                         width={16}
                         height={16}
                         alt="Verified"
+                        className='pointer-events-none'
                       />
-                    ) : (
-                      ''
                     )}
                     {server.name}
                   </p>
@@ -93,6 +96,7 @@ export default function Servers() {
                     src={'/assets/members.svg'}
                     width={16}
                     height={16}
+                    className='pointer-events-none'
                     alt="Members"
                   />
                   {Math.ceil(server.members).toLocaleString('pt-BR')}{' '}
@@ -111,25 +115,23 @@ export default function Servers() {
           <ModalContent className="mx-3 lg:mx-0 lg:max-w-4xl">
             <ModalHeader className="py-1 px-5 items-center justify-center">
               <h2 className="text-white font-bold text-lg mt-0.5 gap-1.5 flex items-center">
-                {selectedServer?.partnered ? (
+                {selectedServer?.partnered && (
                   <Image
                     src={'/assets/partner.svg'}
+                    className='pointer-events-none'
                     width={16}
                     height={16}
                     alt="Partnered"
                   />
-                ) : (
-                  ''
                 )}
-                {selectedServer?.verified ? (
+                {selectedServer?.verified && (
                   <Image
                     src={'/assets/verified.svg'}
+                    className='pointer-events-none'
                     width={16}
                     height={16}
                     alt="Verified"
                   />
-                ) : (
-                  ''
                 )}
                 {selectedServer?.name}
               </h2>
@@ -138,7 +140,7 @@ export default function Servers() {
               <img
                 alt="server banner"
                 src={selectedServer?.bannerURL}
-                className="w-full h-full object-cover max-h-56 p-0"
+                className="w-full h-full object-cover max-h-56 p-0 pointer-events-none"
               />
               <div className="px-2 lg:px-5 flex justify-between items-center mt-0.5">
                 <h3 className="text-white font-bold text-lg">Sobre</h3>
@@ -165,7 +167,7 @@ export default function Servers() {
               >
                 {selectedServer?.description}
               </Markdown>
-              {selectedServer?.inviteURL !== '' ? (
+              {selectedServer?.inviteURL !== '' && (
                 <Link
                   className="text-principal text-md items-center justify-center gap-1 hover:text-gray-100 flex mx-5 bg-neutral-800 rounded-md p-2 font-bold"
                   href={selectedServer?.inviteURL as Url}
@@ -173,8 +175,6 @@ export default function Servers() {
                   <MdLink />
                   Link do Servidor
                 </Link>
-              ) : (
-                <></>
               )}
             </ModalBody>
           </ModalContent>

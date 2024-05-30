@@ -5,10 +5,13 @@ import { MdArrowBack } from 'react-icons/md';
 import servers from '@/data/servers.json';
 import Marquee from 'react-fast-marquee';
 import Link from 'next/link';
+import { Footer } from './components/Footer';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-3 lg:px-32">
+    <>
+      <div style={{ backgroundImage: 'url(/banner.png)' }} className='w-full object-cover bg-center h-64'></div>
+      <main className="flex flex-col items-center justify-center p-3 lg:px-32 -my-24">
       <div className="max-w-4xl w-full items-center lg:items-start justify-center flex flex-col max-xl:my-2 gap-1 -mt-2">
         <Image
           isBlurred
@@ -45,7 +48,7 @@ export default function Home() {
           </h2>
           <Link
             className="text-principal text-md items-center gap-1 hover:text-gray-100 hidden lg:flex bg-neutral-900 p-2 rounded-md font-bold transition-all duration-200"
-            href="/servers"
+            href="/portfolio"
           >
             <MdArrowBack />
             Mais servidores
@@ -73,25 +76,21 @@ export default function Home() {
                 />
                 <div className="flex flex-col">
                   <p className="text-white font-bold text-md ml-3 gap-1.5 flex items-center">
-                    {server.partnered ? (
+                    {server.partnered && (
                       <Image
                         src={'/assets/partner.svg'}
                         width={16}
                         height={16}
                         alt="Partnered"
                       />
-                    ) : (
-                      ''
                     )}
-                    {server.verified ? (
+                    {server.verified && (
                       <Image
                         src={'/assets/verified.svg'}
                         width={16}
                         height={16}
                         alt="Verified"
                       />
-                    ) : (
-                      ''
                     )}
                     {server.name}
                   </p>
@@ -132,25 +131,21 @@ export default function Home() {
                 />
                 <div className="flex flex-col">
                   <p className="text-white font-bold text-md ml-3 gap-1.5 flex items-center">
-                    {server.partnered ? (
+                    {server.partnered && (
                       <Image
                         src={'/assets/partner.svg'}
                         width={16}
                         height={16}
                         alt="Partnered"
                       />
-                    ) : (
-                      ''
                     )}
-                    {server.verified ? (
+                    {server.verified && (
                       <Image
                         src={'/assets/verified.svg'}
                         width={16}
                         height={16}
                         alt="Verified"
                       />
-                    ) : (
-                      ''
                     )}
                     {server.name}
                   </p>
@@ -170,12 +165,14 @@ export default function Home() {
         </Marquee>
         <Link
           className="text-principal text-md items-center justify-center gap-1 hover:text-gray-100 lg:hidden flex w-full bg-neutral-900 rounded-md p-2 font-bold"
-          href="/servers"
+          href="/portfolio"
         >
           <MdArrowBack />
           Mais servidores
         </Link>
+        {/* <Footer /> */}
       </div>
     </main>
+    </>
   );
 }

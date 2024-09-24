@@ -10,6 +10,7 @@
 		"partnered": false,
 		"isHighlight": true,
 		"isHome": true,
+		"isServersPage": true,
 		"members": 700000
 	},
 	{
@@ -23,6 +24,7 @@
 		"partnered": false,
 		"isHighlight": false,
 		"isHome": true,
+		"isServersPage": true,
 		"members": 25000
 	},
 	{
@@ -36,6 +38,7 @@
 		"partnered": false,
 		"isHighlight": false,
 		"isHome": true,
+		"isServersPage": true,
 		"members": 3000000
 	},
 	{
@@ -49,6 +52,7 @@
 		"partnered": false,
 		"isHighlight": false,
 		"isHome": true,
+		"isServersPage": true,
 		"members": 500000
 	},
 	{
@@ -62,6 +66,7 @@
 		"partnered": false,
 		"isHighlight": false,
 		"isHome": true,
+		"isServersPage": true,
 		"members": 150000
 	},
 	{
@@ -75,6 +80,7 @@
 		"partnered": true,
 		"isHighlight": false,
 		"isHome": true,
+		"isServersPage": true,
 		"members": 100000
 	},
 	{
@@ -88,6 +94,7 @@
 		"partnered": false,
 		"isHighlight": false,
 		"isHome": true,
+		"isServersPage": true,
 		"members": 60000
 	},
 	{
@@ -101,6 +108,7 @@
 		"partnered": false,
 		"isHighlight": false,
 		"isHome": true,
+		"isServersPage": true,
 		"members": 30000
 	}
 ]

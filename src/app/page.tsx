@@ -25,9 +25,9 @@ export default function Home() {
 					/>
 					<h1 className="text-white font-bold text-3xl mb-8">Locutor</h1>
 					<p className="text-principal text-md text-left mb-1">
-						Olá! Me chamo <strong>Leandro</strong> e tenho 22 anos. Sou um
+						Olá! Me chamo <strong>Leandro</strong> e tenho 24 anos. Sou um
 						entusiasta apaixonado em construir, crescer e gerenciar grandes
-						comunidades para jogos, organizações e marcas. Estou há 7 anos
+						comunidades para jogos, organizações e marcas. Estou há 9 anos
 						desenvolvendo, gerenciando e criando soluções para comunidades no
 						Discord e atualmente trabalho como <strong>Administrador</strong>,{" "}
 						<strong>Líder de equipe</strong> e <strong>Moderador</strong>.

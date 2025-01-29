@@ -7,6 +7,23 @@ import Marquee from "react-fast-marquee";
 import Link from "next/link";
 
 export default function Home() {
+	const birthDate = new Date("2001-01-26");
+	const workDate = new Date("2016-01-26");
+	const today = new Date();
+	const age = today.getFullYear() - birthDate.getFullYear();
+	const isBirthdayPassed =
+		today.getMonth() > birthDate.getMonth() ||
+		(today.getMonth() === birthDate.getMonth() &&
+			today.getDate() >= birthDate.getDate());
+
+	const finalAge = isBirthdayPassed ? age : age - 1;
+	const workYears = today.getFullYear() - workDate.getFullYear();
+	const isWorkPassed =
+		today.getMonth() > workDate.getMonth() ||
+		(today.getMonth() === workDate.getMonth() &&
+			today.getDate() >= workDate.getDate());
+
+	const finalWork = isWorkPassed ? workYears : workYears - 1;
 	return (
 		<>
 			<div
@@ -25,9 +42,9 @@ export default function Home() {
 					/>
 					<h1 className="text-white font-bold text-3xl mb-8">Locutor</h1>
 					<p className="text-principal text-md text-left mb-1">
-						Olá! Me chamo <strong>Leandro</strong> e tenho 24 anos. Sou um
+						Olá! Me chamo <strong>Leandro</strong> e tenho {finalAge} anos. Sou um
 						entusiasta apaixonado em construir, crescer e gerenciar grandes
-						comunidades para jogos, organizações e marcas. Estou há 9 anos
+						comunidades para jogos, organizações e marcas. Estou há {finalWork} anos
 						desenvolvendo, gerenciando e criando soluções para comunidades no
 						Discord e atualmente trabalho como <strong>Administrador</strong>,{" "}
 						<strong>Líder de equipe</strong> e <strong>Moderador</strong>.

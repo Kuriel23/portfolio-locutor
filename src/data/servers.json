@@ -9,7 +9,7 @@
 		"verified": true,
 		"partnered": false,
 		"isHighlight": true,
-		"isHome": true,
+		"isHome": false,
 		"isServersPage": true,
 		"members": 700000
 	},
@@ -25,7 +25,21 @@
 		"isHighlight": false,
 		"isHome": true,
 		"isServersPage": true,
-		"members": 25000
+		"members": 40000
+	},
+	{
+		"name": "Bonfire",
+		"description": "Lorem **ipsum** dolor sit amet",
+		"avatarURL": "https://i.imgur.com/NZuELV7.gif",
+		"bannerURL": "https://imgur.com/p1rCRcW",
+		"inviteURL": "https://discord.gg/bonfire",
+		"tags": ["Administrador"],
+		"verified": false,
+		"partnered": false,
+		"isHighlight": false,
+		"isHome": true,
+		"isServersPage": true,
+		"members": 50000
 	},
 	{
 		"name": "LimeWire",
@@ -37,7 +51,7 @@
 		"verified": true,
 		"partnered": false,
 		"isHighlight": false,
-		"isHome": true,
+		"isHome": false,
 		"isServersPage": true,
 		"members": 3000000
 	},
@@ -51,7 +65,7 @@
 		"verified": true,
 		"partnered": false,
 		"isHighlight": false,
-		"isHome": true,
+		"isHome": false,
 		"isServersPage": true,
 		"members": 500000
 	},
@@ -79,7 +93,7 @@
 		"verified": false,
 		"partnered": true,
 		"isHighlight": false,
-		"isHome": true,
+		"isHome": false,
 		"isServersPage": true,
 		"members": 100000
 	},
@@ -107,7 +121,7 @@
 		"verified": true,
 		"partnered": false,
 		"isHighlight": false,
-		"isHome": true,
+		"isHome": false,
 		"isServersPage": true,
 		"members": 30000
 	}

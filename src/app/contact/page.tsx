@@ -1,5 +1,5 @@
 "use client";
-import { Input, Textarea } from "@nextui-org/react";
+import { Input, Textarea } from "@heroui/react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { MdArrowBackIosNew, MdSend } from "react-icons/md";

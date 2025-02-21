@@ -1,6 +1,6 @@
 "use client";
 
-import { Image } from "@nextui-org/react";
+import { Image } from "@heroui/react";
 import { MdArrowBack } from "react-icons/md";
 import servers from "@/data/servers.json";
 import Marquee from "react-fast-marquee";

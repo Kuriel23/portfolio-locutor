@@ -8,7 +8,7 @@ import {
 	ModalContent,
 	ModalHeader,
 	useDisclosure,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { useState } from "react";
 import Markdown from "react-markdown";
 import Link from "next/link";

@@ -13,6 +13,7 @@ import { useState } from "react";
 import Markdown from "react-markdown";
 import Link from "next/link";
 import type { Url } from "next/dist/shared/lib/router/router";
+import { cdn } from "@/utils/cdn";
 
 type Server = {
 	partnered?: boolean;
@@ -52,22 +53,28 @@ export default function Servers() {
 										setSelectedServer(server);
 										onOpen();
 									}}
+									onKeyDown={(e) => {
+										if (e.key === "Enter" || e.key === " ") {
+											setSelectedServer(server);
+											onOpen();
+										}
+									}}
 								>
 									<img
 										alt="server banner"
-										src={server.bannerURL}
+										src={cdn(server.bannerURL, 720, 144)}
 										className="w-full h-full object-cover max-h-36 rounded-t-md pointer-events-none"
 									/>
 									<Image
 										alt="server logo"
 										isBlurred
-										src={server.avatarURL}
-										className="w-12 ml-3 -mt-8 rounded-xl pointer-events-none"
+										src={cdn(server.avatarURL, 48, 48)}
+										className="relative z-10 shadow-black/5 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 w-12 ml-3 -mt-8 rounded-xl pointer-events-none"
 									/>
 									<div className="w-full flex justify-between items-center px-3 mt-3">
 										<p className="text-white font-bold text-md gap-1.5 flex items-center">
 											{server.partnered && (
-												<Image
+												<img
 													src={"/assets/partner.svg"}
 													width={16}
 													height={16}
@@ -76,7 +83,7 @@ export default function Servers() {
 												/>
 											)}
 											{server.verified && (
-												<Image
+												<img
 													src={"/assets/verified.svg"}
 													width={16}
 													height={16}
@@ -91,7 +98,7 @@ export default function Servers() {
 										</div>
 									</div>
 									<p className="text-principal text-md mt-2 gap-1.5 px-3 flex items-center">
-										<Image
+										<img
 											src={"/assets/members.svg"}
 											width={16}
 											height={16}
@@ -115,7 +122,7 @@ export default function Servers() {
 						<ModalHeader className="py-1 px-5 items-center justify-center">
 							<h2 className="text-white font-bold text-lg mt-0.5 gap-1.5 flex items-center">
 								{selectedServer?.partnered && (
-									<Image
+									<img
 										src={"/assets/partner.svg"}
 										className="pointer-events-none"
 										width={16}
@@ -124,7 +131,7 @@ export default function Servers() {
 									/>
 								)}
 								{selectedServer?.verified && (
-									<Image
+									<img
 										src={"/assets/verified.svg"}
 										className="pointer-events-none"
 										width={16}
@@ -147,25 +154,28 @@ export default function Servers() {
 									<MdLabel /> {selectedServer?.tags?.[0]}
 								</div>
 							</div>
-							<Markdown
-								className="px-2 lg:px-5 text-principal text-sm leading-6"
-								components={{
-									h1(props) {
-										const { node, ...rest } = props;
-										return <h1 className="text-white text-lg mb-4" {...rest} />;
-									},
-									p(props) {
-										const { node, ...rest } = props;
-										return <p className="mb-5" {...rest} />;
-									},
-									ul(props) {
-										const { node, ...rest } = props;
-										return <ul className="list-disc ml-5" {...rest} />;
-									},
-								}}
-							>
-								{selectedServer?.description}
-							</Markdown>
+							<div className="px-2 lg:px-5 text-principal text-sm leading-6">
+								<Markdown
+									components={{
+										h1(props) {
+											const { node, ...rest } = props;
+											return (
+												<h1 className="text-white text-lg mb-4" {...rest} />
+											);
+										},
+										p(props) {
+											const { node, ...rest } = props;
+											return <p className="mb-5" {...rest} />;
+										},
+										ul(props) {
+											const { node, ...rest } = props;
+											return <ul className="list-disc ml-5" {...rest} />;
+										},
+									}}
+								>
+									{selectedServer?.description}
+								</Markdown>
+							</div>
 							{selectedServer?.inviteURL !== "" && (
 								<Link
 									className="text-principal text-md items-center justify-center gap-1 hover:text-gray-100 flex mx-5 bg-neutral-800 rounded-md p-2 font-bold"

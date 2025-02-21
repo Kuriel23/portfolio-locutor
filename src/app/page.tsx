@@ -1,10 +1,11 @@
 "use client";
 
-import { Image } from "@heroui/react";
 import { MdArrowBack } from "react-icons/md";
 import servers from "@/data/servers.json";
 import Marquee from "react-fast-marquee";
 import Link from "next/link";
+import { cdn } from "@/utils/cdn";
+import { Image } from "@heroui/react";
 
 export default function Home() {
 	const birthDate = new Date("2001-01-26");
@@ -32,22 +33,20 @@ export default function Home() {
 			/>
 			<main className="flex flex-col items-center justify-center p-3 lg:px-32 -my-24">
 				<div className="max-w-4xl w-full items-center lg:items-start justify-center flex flex-col max-xl:my-2 gap-1 -mt-2">
-					<Image
-						isBlurred
+					<img
 						src={"/favicon.gif"}
-						alt="Logo"
+						alt="Avatar"
 						width={140}
-						height={140}
-						className="mt-4"
+						className="mt-4 rounded-xl w-32 h-32 object-cover"
 					/>
 					<h1 className="text-white font-bold text-3xl mb-8">Locutor</h1>
 					<p className="text-principal text-md text-left mb-1">
-						Olá! Me chamo <strong>Leandro</strong> e tenho {finalAge} anos. Sou um
-						entusiasta apaixonado em construir, crescer e gerenciar grandes
-						comunidades para jogos, organizações e marcas. Estou há {finalWork} anos
-						desenvolvendo, gerenciando e criando soluções para comunidades no
-						Discord e atualmente trabalho como <strong>Administrador</strong>,{" "}
-						<strong>Líder de equipe</strong> e <strong>Moderador</strong>.
+						Olá! Me chamo <strong>Leandro</strong> e tenho {finalAge} anos. Sou
+						um entusiasta apaixonado em construir, crescer e gerenciar grandes
+						comunidades para jogos, organizações e marcas. Estou há {finalWork}{" "}
+						anos desenvolvendo, gerenciando e criando soluções para comunidades
+						no Discord e atualmente trabalho como <strong>Administrador</strong>
+						, <strong>Líder de equipe</strong> e <strong>Moderador</strong>.
 					</p>
 					<p className="text-principal text-md text-left my-2">
 						Hoje em dia eu tenho a honra de <strong>liderar</strong> a{" "}
@@ -94,13 +93,13 @@ export default function Home() {
 										<Image
 											alt="server logo"
 											isBlurred
-											src={server.avatarURL}
+											src={cdn(server.avatarURL, 48, 48)}
 											className="w-12 bg-cover rounded-md"
 										/>
 										<div className="flex flex-col">
 											<p className="text-white font-bold text-md ml-3 gap-1.5 flex items-center">
 												{server.partnered && (
-													<Image
+													<img
 														src={"/assets/partner.svg"}
 														width={16}
 														height={16}
@@ -108,7 +107,7 @@ export default function Home() {
 													/>
 												)}
 												{server.verified && (
-													<Image
+													<img
 														src={"/assets/verified.svg"}
 														width={16}
 														height={16}
@@ -118,7 +117,7 @@ export default function Home() {
 												{server.name}
 											</p>
 											<p className="text-principal text-md ml-3 gap-1.5 flex items-center">
-												<Image
+												<img
 													src={"/assets/members.svg"}
 													width={16}
 													height={16}
@@ -153,13 +152,13 @@ export default function Home() {
 										<Image
 											alt="server logo"
 											isBlurred
-											src={server.avatarURL}
+											src={cdn(server.avatarURL, 48, 48)}
 											className="w-12 bg-cover rounded-md"
 										/>
 										<div className="flex flex-col">
 											<p className="text-white font-bold text-md ml-3 gap-1.5 flex items-center">
 												{server.partnered && (
-													<Image
+													<img
 														src={"/assets/partner.svg"}
 														width={16}
 														height={16}
@@ -167,7 +166,7 @@ export default function Home() {
 													/>
 												)}
 												{server.verified && (
-													<Image
+													<img
 														src={"/assets/verified.svg"}
 														width={16}
 														height={16}
@@ -177,7 +176,7 @@ export default function Home() {
 												{server.name}
 											</p>
 											<p className="text-principal text-md ml-3 gap-1.5 flex items-center">
-												<Image
+												<img
 													src={"/assets/members.svg"}
 													width={16}
 													height={16}

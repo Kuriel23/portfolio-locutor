@@ -1,0 +1,5 @@
+export function cdn(url: string, width: number, height: number) {
+	const urlObj = new URL(url);
+	const newUrl = `https://wsrv.nl/?url=${encodeURIComponent(`${urlObj.protocol}//${urlObj.host}${urlObj.pathname}`)}&output=${urlObj.pathname.endsWith(".gif") ? "gif" : "webp"}&w=${width}&h=${height}&q=99&n=-1`;
+	return newUrl;
+}
